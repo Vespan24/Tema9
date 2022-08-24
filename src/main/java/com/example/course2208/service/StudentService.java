@@ -51,7 +51,7 @@ public class StudentService {
 
     public Integer getAverageGradeBySpecialty(Integer specialtyId) throws StudentNotFoundException, NoGradesException {
         Optional<List<Student>> tmpOptionalListStudent =
-                Optional.ofNullable(studentRepository.findAllStudentsBySpecialty(specialtyId));
+                Optional.ofNullable(studentRepository.findAllBySpecialty(specialtyId));
         if (tmpOptionalListStudent.isEmpty()) {
             throw new StudentNotFoundException();
         } else {
@@ -85,7 +85,7 @@ public class StudentService {
     public Student getStudentWithHighestGradeFromSpecialty(Integer specialtyId)
             throws StudentNotFoundException, NoGradesException {
         Optional<List<Student>> tmpOptionalListStudent =
-                Optional.of(studentRepository.findAllStudentsBySpecialty(specialtyId));
+                Optional.of(studentRepository.findAllBySpecialty(specialtyId));
         if (tmpOptionalListStudent.isEmpty()) {
             throw new StudentNotFoundException();
         }

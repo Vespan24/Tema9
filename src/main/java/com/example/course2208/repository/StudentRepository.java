@@ -7,5 +7,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface StudentRepository extends JpaRepository<Student, Integer> {
-    public List<Student> findAllStudentsBySpecialty(Integer specialtyId);
+    public List<Student> findAllBySpecialty(Integer specialtyId);
 }
