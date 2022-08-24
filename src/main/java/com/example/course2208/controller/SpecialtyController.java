@@ -24,8 +24,8 @@ public class SpecialtyController {
         return specialtyService.getAllStudentBySpecialty(specialtyId);
     }
 
-    @GetMapping("withmoststudents")
-    public Specialty getSpecialtyWithMostStudents() throws SpecialtyNotFoundException {
+    @GetMapping("withthemoststudents")
+    public Specialty getSpecialtyWithTheMostStudents() throws SpecialtyNotFoundException {
         return specialtyService.getSpecialtyWithTheMostStudents();
     }
 }
