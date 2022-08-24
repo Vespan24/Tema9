@@ -44,8 +44,8 @@ public class StudentController {
         return studentService.getStudentWithHighestGrade();
     }
 
-    @GetMapping("smartest/specialty")
-    public Student getStudentWithHighestGradeFromSpecialty(Integer specialtyId)
+    @GetMapping("smartest/{specialtyId}")
+    public Student getStudentWithHighestGradeFromSpecialty(@PathVariable Integer specialtyId)
             throws NoGradesException, StudentNotFoundException {
         return studentService.getStudentWithHighestGradeFromSpecialty(specialtyId);
     }
